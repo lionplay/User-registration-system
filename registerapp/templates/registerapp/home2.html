@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<!-- {% for post in posts %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <title>{{ post.title }}</title><br>
+      <img class="d-block w-100-px text-center" src="{{ post.photo.url }}" alt=""><br>
+      <p>{{ post.content|safe }}</p>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-20" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+</div>
+{% endfor %} -->
+        
+        {% for post in posts %}
+        <div class="text-center ">
+            <title>{{ post.title }}</title>
+        </div>
+        <div>
+            <p>{{ post.content|safe }}</p>
+        </div>
+        <div class="container">
+            <img class="img-fluid " src="{{ post.photo.url }}" alt="" ><br>
+            <span>{{ post.created_add|date:"Y-m-d" }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+ 
